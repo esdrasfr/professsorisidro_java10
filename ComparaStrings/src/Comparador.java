@@ -1,4 +1,8 @@
-
+/* exemplo de comparacao de Strings 
+ * 
+ *  mensagem: NUNCA compare Strings com ==, use sempre EQUALS
+ * 
+ * */
 public class Comparador {
 	public static void main(String[] args) {
 		
