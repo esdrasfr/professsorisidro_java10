@@ -5,7 +5,7 @@ public class Time {
 	private int segu;
 	
 	public String exibirHoraUniversal() {
-		return hora+":"+minu+":"+segu;
+		return hora + ":" + minu + ":" + segu;
 	}
 	
 	public String exibirHoraPadrao() {
@@ -45,6 +45,4 @@ public class Time {
 		this.segu = segu;
 	}
 	
-	
-
 }
