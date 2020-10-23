@@ -1,36 +1,32 @@
+import java.util.ArrayList;
 
 public class EmpregadoTeste {
 	public static void main(String[] args) {
-		// declaro
-		Empregado e1, e2, e3, e4;
 		
-		// instancio o objeto
-		e1 = new Empregado("Isidro","Professor",5000.0);
-		e2 = new Empregado("Adalberto", "Presidente", 8000.0);
-		e3 = new Empregado("Fulano", "Cargo da base salarial");
-		e4 = new Empregado("Empregado sem cargo", 2000.0);
+		// declaro uma variável do tipo ArrayList que armazena Empregados
+		// o que significa? que posso ter uma quantidade incontável de objetos armazenados aqui
+		ArrayList<Empregado> lista;
 		
-		// preencho
-//		e1.setNome("Isidro");
-//		e1.setCargo("Professor");
-//		e1.setSalario(5000.0);
-//		
-//		e2.setNome("Adalberto");
-//		e2.setCargo("Presidente");
-//		e2.setSalario(8000.0);
+		lista = new ArrayList<Empregado>(); // instanciei a lista
 		
-		e1.imprimir();
-		e2.imprimir();
-		e3.imprimir();
-		e4.imprimir();
-		
-		e1.aumentarSalario(15.72);
-		e2.aumentarSalario(8.97);
-		
-		e1.imprimir();
-		e2.imprimir();
+		lista.add(new Empregado("Jose", "Presidente", 10000));
+		lista.add(new Empregado("Maria", "Vice Presidente", 9000));
+		lista.add(new Empregado("Joao", "Coordenador", 7000));
+		lista.add(new Empregado("Iza","Patroa", 28962));
+		lista.add(new Empregado("Pedro", "Piao", 2000));
 		
 		
+		for ( int pos = 0; pos < lista.size() ; pos++) {
+			lista.get(pos).imprimir();
+		}
+		
+		System.out.println(" ------ AUMENTANDO O ORDENADO POR CONTA DO DISSIDIO -------- ");
+	
+		for ( Empregado e : lista) { //  equivale ao comando: for (int pos=0; pos<lista.size(); pos++){
+			                         //                           Empregado e = lista.get(pos);
+			e.aumentarSalario(10.0);
+			e.imprimir();
+		}
 	
 	}
 
