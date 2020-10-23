@@ -25,6 +25,12 @@ public class ContaBancaria {
 		this.saldo = 0.0;
 	}
 	
+	public String exibirInfo() {
+		String resultado;
+		resultado = "Conta Bancária: "+conta+"/"+dv+ " ("+agencia+")" + "  R$ "+saldo;
+		return resultado;
+	}
+	
 	public void depositar(double valor) {
 		this.saldo += valor;
 	}
