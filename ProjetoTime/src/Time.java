@@ -4,6 +4,24 @@ public class Time {
 	private int minu;
 	private int segu;
 	
+	public void setHorario(int hora, int minu, int segu) {
+		this.hora = hora;
+		this.minu = minu;
+		this.segu = segu;
+	}
+	
+	public void setHorario(int hora, int minu) {
+		this.hora = hora;
+		this.minu = minu;
+		this.segu = 0;
+	}
+	
+	public void setHorario(int hora) {
+		this.hora = hora;
+		this.minu = 0;
+		this.segu = 0;
+	}
+	
 	public String exibirHoraUniversal() {
 		return hora + ":" + minu + ":" + segu;
 	}
